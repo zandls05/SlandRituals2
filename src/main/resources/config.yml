@@ -1,0 +1,33 @@
+# SlandRituals - configuración general.
+# Los textos están en messages.yml, las animaciones por defecto en animaciones.yml
+# y los rituales en rituals.yml (también se editan desde /rituales).
+
+settings:
+  # true = clic derecho en el altar abre el menú. false = entrega directa con el objeto en la mano.
+  use-menu: true
+  # Radio (bloques) por defecto en el que se ve y se oye un ritual. Cada ritual puede definir el suyo.
+  broadcast-radius: 60
+  # Si el ritual se cancela (jefe desaparecido, altar quitado, apagado del servidor),
+  # las ofrendas caen al suelo junto al altar.
+  refund-on-abort: true
+  # Segundos que dura el jefe de las pruebas (/rituales probar) antes de eliminarse.
+  test-boss-seconds: 10
+  # Los objetos de la ofrenda flotan y giran sobre el altar durante la invocación y, al final,
+  # caen sobre él: el impacto despierta al jefe. false = desactivado.
+  floating-offerings: true
+
+integrations:
+  # Invocar jefes del plugin Boss de MineAcademy (si está instalado). Se configura con boss.boss-id en cada ritual.
+  boss: true
+  # Invocar jefes de MythicMobs (si está instalado). Si falla, se usa el jefe vanilla del ritual.
+  mythicmobs: true
+  # Permite usar %placeholders% de PlaceholderAPI en títulos, subtítulos y mensajes de las fases.
+  placeholderapi: true
+
+performance:
+  # Máximo de partículas por fotograma (cada 2 ticks) y por ritual.
+  max-particles-per-tick: 150
+  # No dibujar animaciones si no hay jugadores que puedan verlas.
+  skip-when-no-players: true
+  # Aura suave de partículas en altares inactivos cuando hay jugadores a menos de 20 bloques.
+  ambient-particles: true
